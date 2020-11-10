@@ -245,7 +245,7 @@ char* readString(char* prompt)
   size_t inputLength = strlen(buffer);
   char *input = calloc(sizeof(char), inputLength);
   strncpy(input, buffer, inputLength-1);
-  input[inputLength] = '\0';
+  input[inputLength-1] = '\0';
   return input;
 }
 struct entry *createEntry(char* name, char* phoneNumber) 
